@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<taglib
+	version="2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd ">
+
+	<!-- 必要：开发人员放这个标记来声明标记库的版本。 -->
+	<tlib-version>1.2</tlib-version>
+	<!-- 必要：主要由工具使用  -->
+	<short-name>RandomTags</short-name>
+	<!-- 上一章用到的EL函数 -->
+	<function>
+		<name>rollIt</name>
+		<function-class>foo.DiceRoller</function-class>
+		<function-signature>int rollDice()</function-signature>
+	</function>
+
+	<!-- ////分割线//// -->
+	<!-- ////分割线//// -->
+	<!-- ////分割线//// -->
+
+	<!-- taglib指令中使用的唯一名！ -->
+	<uri>randomThings</uri>
+	<tag>
+		<!-- 可选：不过有这个标记确实很有好处 -->
+		<description>random advice</description>
+		<!-- 必要：标记中使用的名字 -->
+		<name>advice</name>
+		<!-- 必要：这样容器才知道在JSP中使用这个标记时要调用什么 -->
+		<tag-class>foo.AdvisorTagHandler</tag-class>
+		<!-- 必要：这说明标记的体中不能有任何内容 -->
+		<body-content>empty</body-content>
+		<!-- 可选：如果标记有属性，那么每个属性都需要一个<attribute>元素 -->
+		<attribute>
+			<!-- 这说明标记中必须放一个"user"属性 -->
+			<name>user</name>
+			<required>true</required>
+			<!-- 这说明"user"属性可以是一个运行时表达式，不一定必须是String直接量 -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

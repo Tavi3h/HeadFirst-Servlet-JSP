@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<taglib
+	version="2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd ">
+
+	<tlib-version>1.0</tlib-version>
+	<short-name>Forms Taglib</short-name>
+	<description>
+		An example tab library of replacements for the HTML form tags
+	</description>
+	<uri>http://example.com/tags/forms</uri>
+	<tag>
+		<name>select</name>
+		<tag-class>com.example.taglib.SelectTagHandler</tag-class>
+		<body-content>empty</body-content>
+		<description>
+			This tag constructs an HTML form 'select' tag.It also generates the 'option' tags
+			based on the set of items in a list passed in by the optionList tag attribute.
+		</description>
+
+		<!-- 声明必要属性，对应这些属性，在标记处理器中必须有明确的设置方法 -->
+		<attribute>
+			<name>optionsList</name>
+			<type>java.util.List</type>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+		</attribute>
+
+		<!-- 声明这个标记可以接受任意数目的动态属性 -->
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+</taglib>

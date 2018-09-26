@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<!-- form-bean元素声明表单bean对象的符号名和类。 -->
+	<form-beans>
+		<form-bean
+			name="selectBeerForm"
+			type="com.example.web.BeerSelectForm" />
+	</form-beans>
+
+	<action-mappings>
+		<!-- 
+			action元素将URL路径映射到控制器类；
+			路径的.do扩展名不包含在Struts配置中。
+		 -->
+		<!-- 
+		 	action还用于将一个表单bean与动作（action）相关联。
+		 	这由表单bean符号名指定。Struts会创建这个bean，并
+		 	保存在特定作用域。
+		 	如果进行验证，而且从验证方法返回了错误，input属性会
+		 	声明负责显示错误消息的视图：这通常就是提交这个动作（action）
+		 	的表单。
+		 -->
+		<action
+			path="/SelectBeer"
+			type="com.example.web.BeerSelectAction"
+			name="selectBeerForm"
+			scope="request"
+			validate="true"
+			input="/form.jsp">
+			
+			<!-- forward元素在视图符号名和视图组件物理路径之间创建一个映射 -->
+			<forward
+				name="show_result"
+				path="/result.jsp" />
+		</action>
+	</action-mappings>
+
+	<message-resources parameter="ApplicationResources" />
+
+</struts-config>

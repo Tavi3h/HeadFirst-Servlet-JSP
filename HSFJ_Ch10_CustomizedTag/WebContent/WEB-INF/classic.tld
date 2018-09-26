@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<taglib
+	version="2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd ">
+	<tlib-version>1.0</tlib-version>
+	<uri>KathyClassicTags</uri>
+
+	<tag>
+		<description>ludicrous use of a Classic tag</description>
+		<name>classicOne</name>
+		<tag-class>foo.Classic1</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+	<tag>
+		<description>Classic Tag with doEndTag</description>
+		<name>classicTwo</name>
+		<tag-class>foo.Classic2</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+	<tag>
+		<description>My IteratorTag</description>
+		<name>iteratorMovies</name>
+		<tag-class>foo.MyIteratorTag</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>Menu</name>
+		<tag-class>foo.Menu</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+	<tag>
+		<name>MenuItem</name>
+		<tag-class>foo.MenuItem</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>itemValues</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+</taglib>

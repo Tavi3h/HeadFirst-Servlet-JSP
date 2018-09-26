@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<taglib
+	version="2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd ">
+
+	<tlib-version>1.2</tlib-version>
+	<uri>DiceFunctions</uri>
+	<function>
+		<name>rollIt</name>
+		<function-class>foo.DiceRoller</function-class>
+		<function-signature>int rollDice()</function-signature>
+	</function>
+
+</taglib>

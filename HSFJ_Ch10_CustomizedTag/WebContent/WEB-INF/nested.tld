@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<taglib
+	version="2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd ">
+
+	<tlib-version>1.0</tlib-version>
+	<short-name>Nested</short-name>
+
+	<uri>nested_tag</uri>
+	<tag>
+		<name>NestedLevel_classic</name>
+		<tag-class>foo.NestedLevelTagClassic</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+	<tag>
+		<name>NestedLevel_simple</name>
+		<tag-class>foo.NestedLevelTagSimple</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+	<tag>
+		<name>ClassicParent</name>
+		<tag-class>foo.ClassicParent</tag-class>
+		<body-content>scriptless</body-content> 
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+
+	<tag>
+		<name>SimpleInner</name>
+		<tag-class>foo.SimpleInner</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+</taglib>

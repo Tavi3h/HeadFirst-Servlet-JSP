@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<taglib
+	version="2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd ">
+	<tlib-version>1.0</tlib-version>
+	<uri>simpleTags</uri>
+	
+	<tag>
+		<description>worst use a custom tag</description>
+		<name>simple1</name>
+		<tag-class>foo.SimpleTagTest1</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+	
+	<tag>
+		<description>marginally better use of a custom tag</description>
+		<name>simple2</name>
+		<tag-class>foo.SimpleTagTest2</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+	
+	<tag>
+		<description>takes an attribute and iterates over body</description>
+		<name>simple5</name>
+		<tag-class>foo.SimpleTagTest5</tag-class> 
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>movieList</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+</taglib>
